@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communicative English – Questions with Answers and Explanations</title>
+<style>
+:root{--blue:#164b86;--pale:#eef5fc;--ink:#17212b;--green:#167345;--red:#b42318}*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:var(--ink);font:16px/1.55 Arial,sans-serif}.wrap{max-width:900px;margin:auto;padding:18px}.hero{background:#123e70;color:white;padding:24px;border-radius:14px}.hero h1{margin:0 0 8px;font-size:25px}.hero p{margin:0}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.toolbar button,.reset{border:0;border-radius:8px;padding:10px 14px;background:var(--blue);color:white;font-weight:700;cursor:pointer}.section{margin:22px 0 12px;color:var(--blue);border-bottom:2px solid #cbd9e8;padding-bottom:6px}.q{background:white;border:1px solid #dce3eb;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 2px 7px #17212b0b}.q h3{font-size:16px;margin:0 0 12px}.opts{display:grid;gap:8px}.opt{display:block;border:1px solid #d8e0e9;border-radius:8px;padding:9px 11px;cursor:pointer}.opt input{margin-right:8px}.opt:has(input:checked){background:var(--pale);border-color:#6b9bc9}.feedback{display:none;margin-top:12px;padding:12px;border-radius:8px;background:#f0f6f2}.feedback.show{display:block}.correct{color:var(--green);font-weight:700}.incorrect{color:var(--red);font-weight:700}.explain{margin-top:5px}.short{margin:8px 0;padding:10px;background:#f8fafc;border-left:3px solid #8aa9c9}.passage{background:#fff;padding:17px;border-radius:12px;border:1px solid #dce3eb;white-space:normal}.muted{color:#5c6875;font-size:13px}.score{font-weight:700;margin-left:auto;padding:8px 0}.unreadable{color:#7b4b00;background:#fff7e6;padding:12px;border-radius:8px}
+</style></head><body><main class="wrap">
+<div class="hero"><h1>Communicative English – Practice Test</h1><p>Questions transcribed from the uploaded exam photographs. Choose an answer to see the correct answer and explanation immediately.</p></div>
+<div class="toolbar"><button onclick="showAll()">Show all answers</button><button onclick="hideAll()">Hide explanations</button><button onclick="resetQuiz()">Reset selections</button><span class="score" id="score">Answered: 0</span></div>
+<div class="section"><h2>Part I – Reading: “Close-knit Family”</h2></div>
+<div class="passage"><b>Close-knit Family</b><p>I don't view my important characteristics as different from those my family has imparted on me throughout the years. The pride, care, dedication, effort, and hard-working attitude that I view as critical to any success I may achieve have all descended upon me courtesy of my close-knit, Italian family.</p><p>Born the child of two immigrants who came here with nothing, only one possessing a college degree, the importance of a good work ethic was stressed by my parents from day one. Through their actions in their jobs and through the verbal lessons on life I began to get from the moment I could communicate, they set an example for me to follow, one of being proud of what I do, no matter what it was, and above all, to care about everything I do as if everything had a big impact. This meant that everything had to be done right and be done well. Undoubtedly, following their own advice carried my parents from their status as blue-collar immigrants who labored as factory workers to white-collar citizens, one of whom owns his own business while the other works as a bank officer. Those ascensions from nothing only served as other examples for me to follow, examples that delineated the ability for a person to improve through effort.</p><p>Another quotation from my father propelled me from the time I started school to today: “No matter what you do, you have to be the best.” This set up the inner drive that motivates all my actions. It was what forced me to try hard in school although I didn't know English well enough to always understand the teacher. It's the reason why I have developed my skills. It accounts for my dedication to all activities, and to the hard work I put into all of them as I strive to lead both in class and out. Essentially, my parentage was the first quality that distinguished me as a leader. Despite all the talk of being a leader, I have never lost sight of the importance of my family. I know I owe my family everything, and as a result, I'll always be close with it.</p></div>
+<div id="reading"></div>
+<div class="section"><h2>Part II – Grammar (first exam pages)</h2></div><div id="grammar1"></div>
+<div class="section"><h2>Part III – Vocabulary</h2></div><div id="vocab"></div>
+<div class="section"><h2>Part IV – Grammar and sentence completion (additional pages)</h2></div><div id="grammar2"></div>
+<div class="section"><h2>Part V – Sloths passage: verb forms</h2></div><div id="sloths"></div>
+<div class="section"><h2>Part VI – Advice and modal verbs</h2></div><div id="advice"></div>
+<div class="section"><h2>Part VII – Simple past and present perfect</h2></div><div id="tenses"></div>
+<p class="unreadable"><b>Transcription note:</b> A few lines in the photographs are cut off, blurred, or partly covered. I included the questions that can be read reliably and did not invent missing question wording or answer choices.</p>
+</main>
+<script>
+const banks={
+reading:[
+['The central point of paragraph one is that…',['The writer appreciates his family characteristics.','The writer inherited pride, care, dedication, effort and hard work from his family.','The writer believes his characteristics result from what he inherits from his family.','All of the above.'],3,'The paragraph says the writer’s important characteristics came from his close-knit family and that he values them. Option D combines the ideas.'],
+['According to paragraph two, which statement is correct?',['The writer’s parents had many alternatives when they came to Italy.','The writer’s parents came with almost nothing, and only one had a college degree.','The writer was rarely influenced by his parents’ behaviour.','The writer’s family performs daily activities one day later.'],1,'The passage says the parents came with nothing, and only one possessed a college degree.'],
+['The writer is proud of what he does mainly because…',['He learned from his parents’ actions at work.','He received very few verbal lessons from his parents.','Following his family’s example, he learned to care about everything he does.','He depends completely on effort to change his life.'],2,'The passage says his parents taught him to be proud of his work and care about everything he does.'],
+['The bank officer could possibly be described as…',['Blue-collar','White-collar','Daily worker','Immigrant','All of these'],1,'A bank officer is a professional/office worker, which is a white-collar occupation.'],
+['“I strive to lead both in class and out” indicates that…',['He is lazy and tries to improve.','He is energetic but cannot follow his family’s example.','He puts his father’s advice into practice.','He can lead only outside the classroom.'],2,'His effort to lead reflects his father’s advice to do his best in everything.'],
+['The word “their” in paragraph two refers to…',['The blue-collar workers','The white-collar citizens','The writer’s friends','The people who own a business'],0,'In “following their own advice,” their refers to the writer’s parents, who are described as blue-collar immigrants before their progress.'],
+['In paragraph three, the word “you” in the father’s quotation refers to…',['The writer’s father','The writer’s mother','The writer himself / anyone being advised','The inner drive'],2,'The father is giving general advice directly to the writer: whatever you do, do your best.'],
+['A word similar in meaning to “devotion” in paragraph three is…',['Strive','Dedication','Distinguished','Force'],1,'Dedication means commitment or devotion.'],
+['A word similar in meaning to “influence” in paragraph two is…',['Impact','Advise','Curse','Proud'],0,'Impact can mean influence or effect.'],
+['The writer says in the last paragraph that he gave up his relationship with his parents/family.',['True','False','Not mentioned','All are possible'],1,'False. The passage says he has never lost sight of his family’s importance and will always remain close to it.']
+],
+grammar1:[
+['I am not happy with your cough. It sounds serious. You ____ see a doctor soon.',['should','ought','better','All can be answers'],0,'“Should see” is the standard modal structure. “Ought” normally needs “to” (ought to see), and “better” needs “had better”.'],
+['People are travelling a lot these days. We ____ leave early to get the car easily.',['should','ought','had better','had'],2,'“Had better + base verb” gives strong practical advice. “Ought” alone is incomplete; it should be “ought to leave.”'],
+['You ____ eat so much junk food. It is bad for your health.',['should','ought to not','had better not','none'],2,'“Had better not + base verb” is the correct negative advice form.'],
+['Her friend doesn’t worry about what he wants to say. He ____ apologize to her for the hurtful remark.',['should not','ought','has','had better'],3,'“Had better apologize” is grammatically complete and gives strong advice.'],
+['She ____ a new car last year, and she ____ every day now.',['buys, drives','bought, drove','bought, drives','buys, drove'],2,'“Last year” requires the simple past (bought); “now” describes a present habit (drives).'],
+['If you put ice in the sun, it ____ soon.',['will melt','melts','would melt','melted'],1,'This is a zero conditional describing a general fact: present simple in both clauses.'],
+['It is obvious that she would not go to the party unless she ____.',['invited','were invited','invites','were not invited'],1,'The sentence needs the passive form: “unless she were invited.”'],
+['Had the weather been better, the plane ____.',['have crashed','might not have crashed','could have crashed','might have crashed'],1,'This is an inverted third conditional. “Had the weather been better” means “If the weather had been better”; the intended result is “might not have crashed.”'],
+['____ the day I met my best friend for the first time.',['never forget','will never forget','have never forgotten'],1,'The speaker is expressing a future commitment or prediction about remembering: “I will never forget…”'],
+['He ____ his keys yesterday and ____ for them all day.',['lost, looked','has lost, looked','lost, has looked','has lost, has looked'],2,'“Yesterday” requires simple past (lost); “all day” continuing up to now can take present perfect (has looked).'],
+['She ____ as a teacher for ten years before she ____.',['worked, retired','has worked, retired','worked, has retired'],0,'Both actions are in the past; the ten-year period ended before her retirement.'],
+['____ he ____ travelled abroad before?',['Have, ever','Has, ever','Did, ever','Does, ever'],1,'Use present perfect for life experience: “Has he ever travelled…?”'],
+['If you want to be slim, you ____ eat less.',['will','may','can','should'],3,'“Should” expresses advice.'],
+['Why are you standing here? I ____ my I.D. card at home. The guard doesn’t allow me to enter.',['forgot','forget','forgetting','have forgotten'],0,'The simple past “forgot” describes the completed action that caused the present problem.'],
+['____ you ____ the meeting last night with our group?',['Did, attend','Do, attend','Have, attended','Are, attend'],0,'“Last night” is a finished past time, so use “Did + subject + base verb.”']
+],
+vocab:[
+['The internet provides ____ to a wealth of information and resources available to us.',['assimilate','access','keys','glancing through','invaluable','extract'],1,'“Access to” means the opportunity or ability to use information or resources.'],
+['The young generation should know much about culture, customs and values from their ancestors. It is ____ assets for them.',['assimilate','access','keys','glancing through','invaluable','extract'],4,'“Invaluable” means extremely valuable or important.'],
+['Hardship, dedication, perseverance and a positive attitude are ____ to success.',['assimilate','access','keys','glancing through','invaluable','extract'],2,'The natural expression is “keys to success,” meaning important factors that lead to success.'],
+['____ the report, he realized there were several critical errors.',['assimilate','access','keys','glancing through','invaluable','extract'],3,'“Glancing through” means reading or looking over something quickly.'],
+['It took several months for the new immigrant family to fully ____ into the local community.',['assimilate','access','keys','glancing through','invaluable','extract'],0,'“Assimilate into a community” means become part of and adapt to that community.']
+],
+grammar2:[
+['Eden: “Martha, long time no see. Where have you been?” Martha: ____',['I was in Kenya since our farewell party.','I have been in Kenya since our farewell party.','I am in Kenya for the last three years.','I am being Kenyan.'],1,'“Since” marks a period continuing from the past to now, so present perfect is appropriate.'],
+['We ____ nothing for the last two years about our neighbour.',['know','have known','knew','is known'],1,'“For the last two years” describes a period continuing to the present; use present perfect.'],
+['My mother was in the hospital, and I ____ medicine for her, so I took it.',['should have','ought to','should','had better'],1,'“Ought to” is followed by the base verb and expresses what was advisable. The sentence is somewhat awkward in the source, but this is the grammatically complete option.'],
+['What should I do if I get stuck during the exam?',['Try your best to calm down.','You should try to calm down.','You ought to try to calm down.','All'],3,'All three responses are grammatically correct ways to give advice.'],
+['Yesterday, I ____ spaghetti for lunch; since then I ____ anything, but now I ____ eat salad.',['eat / eaten / want','ate / have eaten / want','ate / ate / wanted','All'],1,'“Yesterday” takes simple past; “since then” takes present perfect; “now” takes present tense.'],
+['If I ____ that beautiful girl, I ____ go out for a walk without my siblings.',['wouldn’t','won’t','will not have','does not'],0,'This is a hypothetical situation; “wouldn’t” is the suitable result form.'],
+['If she had had that amount of money, she ____ mother’s life.',['would have saved','will save','would save','all'],0,'This is a third conditional: if + past perfect, would have + past participle.'],
+['____ your best to get her attention if you ____ her.',['Should / loose','try / loose','try / will loose','tried / lost'],1,'The intended expression is “try your best.” The second blank appears to intend “lose,” although the printed options spell it “loose.”'],
+['Mother had been confined to bed for two years before she ____ treatment.',['get','got','have got','all'],1,'The completed past event takes simple past: “got treatment.”'],
+['I was in Addis last year, but I ____ in Jimma in my life.',['have never been','was','is','were'],0,'Present perfect describes life experience up to now; “in my life” signals this use.']
+],
+sloths:[
+['If you ____ a sloth, you would spend most of your life hanging upside down from a tree.',['had been','are','were','being'],2,'This is a second conditional: “If you were…, you would…”'],
+['If a sloth ____ completely still, predators don’t realize it is there.',['would stay','stays','will stay','stayed'],1,'This describes a general fact, so use present simple in the if-clause.'],
+['If you had been in North America 20,000 years ago, you ____ a giant ground sloth.',['saw','would see','would have seen','will see'],2,'This is a third conditional referring to an unreal past: “would have seen.”'],
+['If human beings continue to destroy the rain forest, sloths ____.',['will become','becomes','would become','would have become'],0,'This is a first conditional: if + present simple, will + base verb.']
+],
+advice:[
+['It’s a great town. You ____ visit it someday.',['could','might','should','ought'],2,'“Should” is the most appropriate form for giving advice or a recommendation.'],
+['If she wants to buy an apartment, she ____ consult a good real estate agent.',['has to','had better','may need to','could'],2,'“May need to” expresses a possible necessity and fits the conditional context.'],
+['____ I ask John to help us?',['should','ought','could','ought not to'],0,'“Should I…?” is a correct way to ask for advice.'],
+['Children ____ eat too much chocolate.',['must not','may not','could not','ought not to'],3,'“Ought not to” expresses advice against doing something.'],
+['You ____ come here again, or I’ll report you to the police.',['can’t','won’t','mustn’t','had better not'],3,'“Had better not” gives a strong warning.'],
+['He ____ be punished for his terrible attitude to people.',['might','ought to','could','would'],1,'“Ought to be punished” is the correct advice/obligation structure in the passive.'],
+['I ____ write an article on English grammar tonight, but I have a bad headache. I think I’ll go for a walk instead.',['ought','must','should','have to'],2,'“Should” expresses an intended or advisable action.'],
+['I ____ harder for the exam. It was very difficult, and I didn’t pass it.',['should study','had to study','should have studied','must have studied'],2,'“Should have + past participle” expresses regret about something that was not done.'],
+['Dawit loves chocolate, but he ____ too much or he will get fat.',['should eat','should eat not','shouldn’t eat'],2,'“Shouldn’t eat” gives negative advice.'],
+['I need help, doctor. My baby doesn’t sleep well. What ____?',['had I better do','I should do','should I do'],2,'Questions with “should” use modal + subject + base verb: “What should I do?”'],
+['My mother isn’t feeling well, so I told her that she ____ to the doctor.',['ought','ought go','ought to go'],2,'“Ought” must be followed by “to” before the base verb.'],
+['I’m going to visit your country. Where ____ if I want to go shopping?',['should I go','I should go','ought to I go'],0,'In a question, the modal comes before the subject: “Where should I go?”'],
+['It’s raining and I don’t want to get my dress wet. I ____ an umbrella.',['had better bring','had better to bring','had better not bring'],0,'“Had better” is followed directly by the base verb, without “to.”'],
+['I’m so hot. You ____ your coat.',['should take off','should put on','should to take off'],0,'“Should + base verb” gives advice; taking off a coat helps when someone is hot.']
+],
+tenses:[
+['How many times ____ that movie? (see/you)',['have you seen','did you see'],0,'“How many times” asks about experience up to now, so present perfect is expected.'],
+['Since what age ____ soccer? (play/he)',['has he played','did he play'],0,'“Since what age” asks about an action continuing from the past; use present perfect.'],
+['____ to Jimma last year? (go/they)',['Did they go','Have they gone'],0,'“Last year” is a finished past time, so use simple past.'],
+['____ tennis recently? (play/you)',['Have you played','Did you play'],0,'“Recently” can refer to an unfinished period up to now; present perfect is the expected form here.'],
+['How many cities ____ in? (live/you)',['have you lived','did you live'],0,'The question asks about life experience up to the present: present perfect.'],
+['____ late for last night’s concert? (be/we)',['Were we','Have we been'],0,'“Last night” is a finished past time, so use simple past.'],
+['What ____ for breakfast this morning? (eat/you)',['did you eat','have you eaten'],0,'“This morning” is treated as a finished time in this exam context; use simple past.'],
+['My former teacher ____ for London. (leave)',['has left','left'],0,'Present perfect is appropriate when the result is relevant now and no finished past time is specified.']
+]};
+function render(id,items,prefix){const root=document.getElementById(id);items.forEach((q,i)=>{let n=prefix+'-'+i;let el=document.createElement('article');el.className='q';el.innerHTML=`<h3>${i+1}. ${q[0]}</h3><div class="opts">${q[1].map((o,j)=>`<label class="opt"><input type="radio" name="${n}" value="${j}" onchange="grade('${n}',${q[2]},this)"><b>${String.fromCharCode(65+j)}.</b> ${o}</label>`).join('')}</div><div class="feedback" id="f-${n}"><div class="result"></div><div class="explain"></div></div>`;root.appendChild(el);});}
+function grade(n,a,input){let f=document.getElementById('f-'+n);let ok=Number(input.value)===a;f.classList.add('show');f.querySelector('.result').innerHTML=ok?'<span class="correct">Correct!</span>':`<span class="incorrect">Not quite. Correct answer: ${String.fromCharCode(65+a)}.</span>`;let item=allItems[n];f.querySelector('.explain').textContent=item[3];updateScore();}
+const allItems={};for(const [key,items] of Object.entries(banks)){items.forEach((q,i)=>allItems[key+'-'+i]=q)}
+render('reading',banks.reading,'reading');render('grammar1',banks.grammar1,'grammar1');render('vocab',banks.vocab,'vocab');render('grammar2',banks.grammar2,'grammar2');render('sloths',banks.sloths,'sloths');render('advice',banks.advice,'advice');render('tenses',banks.tenses,'tenses');
+function updateScore(){let checked=document.querySelectorAll('input[type=radio]:checked').length;document.getElementById('score').textContent='Answered: '+checked+' / '+Object.keys(allItems).length;}
+function showAll(){document.querySelectorAll('.feedback').forEach((f)=>{let n=f.id.slice(2),q=allItems[n];if(!q)return;f.classList.add('show');f.querySelector('.result').innerHTML='<span class="correct">Correct answer: '+String.fromCharCode(65+q[2])+'. '+q[1][q[2]]+'</span>';f.querySelector('.explain').textContent=q[3];});}
+function hideAll(){document.querySelectorAll('.feedback').forEach(f=>f.classList.remove('show'));}
+function resetQuiz(){document.querySelectorAll('input[type=radio]').forEach(x=>x.checked=false);hideAll();updateScore();}
+</script></body></html>
