@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>SKW ACADEMY | Learn • Practice • Excel</title>
+  <style>
+    :root{--bg:#080d19;--panel:#111a2b;--panel2:#162238;--line:#263650;--text:#eef4ff;--muted:#9aabc4;--blue:#4d8dff;--cyan:#42d5e8;--green:#2bc48a;--red:#ff6b78}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#14284b 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.55}
+    button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;margin:auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#06101e;font-weight:900;font-size:20px;box-shadow:0 8px 30px #287bff40}
+    h1{font-size:20px;margin:0;letter-spacing:.5px}.tag{font-size:11px;color:var(--muted);letter-spacing:2px}
+    .topright{display:flex;align-items:center;gap:12px}.user-label{color:var(--muted);font-size:13px}
+    .btn{border:0;border-radius:11px;padding:11px 16px;background:var(--blue);color:white;font-weight:700}.btn:hover{filter:brightness(1.1)}.btn.secondary{background:#22334f;border:1px solid #344b6d}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}.btn.danger{background:#522630}
+    .hero{padding:42px 0 28px;display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:center}
+    .eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;font-size:12px}.hero h2{font-size:clamp(32px,6vw,54px);line-height:1.08;margin:12px 0}.hero p{color:var(--muted);max-width:620px}.hero-card,.panel,.course,.stat{background:linear-gradient(160deg,#16243a,#101827);border:1px solid var(--line);border-radius:18px}
+    .hero-card{padding:24px}.hero-card .big{font-size:42px;font-weight:900;color:var(--cyan)}.hero-card p{margin:2px 0}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 28px}.stat{padding:16px}.stat strong{font-size:22px;display:block}.stat span{font-size:12px;color:var(--muted)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 14px}.section-head h2{margin:0;font-size:23px}.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.course{padding:18px;display:flex;flex-direction:column;min-height:190px}.course .icon{font-size:27px}.course h3{margin:8px 0 4px}.course p{color:var(--muted);font-size:14px;margin:0 0 14px}.course .btn{margin-top:auto;align-self:flex-start}
+    .panel{padding:22px;margin:20px 0}.auth{max-width:470px;margin:44px auto}.auth h2{margin-top:0}.field{display:block;margin:14px 0}.field span{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}.field input{width:100%;background:#080f1d;border:1px solid #30435f;color:var(--text);padding:13px;border-radius:10px;outline:none}.field input:focus{border-color:var(--blue)}
+    .auth-actions{display:flex;gap:10px;flex-wrap:wrap}.notice{padding:12px 14px;border-radius:10px;background:#132b37;color:#b9f5e3;border:1px solid #245847;margin:12px 0;font-size:13px}.error{background:#351c27;color:#ffc4cb;border-color:#703544}.hidden{display:none!important}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tab{background:#111a2b;border:1px solid var(--line);color:var(--muted);padding:9px 14px;border-radius:10px}.tab.active{background:#1d3d6b;border-color:#477fc9;color:white}
+    .question{padding:16px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}.question h4{margin:0 0 10px}.option{display:block;padding:9px 11px;border:1px solid var(--line);border-radius:9px;margin:7px 0;color:#d9e5f8}.option input{margin-right:8px;accent-color:var(--blue)}.result{padding:12px;border-radius:10px;margin-top:8px;background:#132b37}.correct{color:#5ce0ac}.incorrect{color:#ff9aa4}
+    footer{border-top:1px solid var(--line);margin-top:44px;padding:22px 0;color:var(--muted);font-size:13px;text-align:center}
+    a{color:#8db8ff}@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:28px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}.wrap{padding:15px}.user-label{display:none}.hero-card{padding:18px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo">S</div><div><h1>SKW ACADEMY</h1><div class="tag">LEARN • PRACTICE • EXCEL</div></div></div>
+    <div class="topright"><span id="userLabel" class="user-label"></span><button id="headerAuthBtn" class="btn secondary">Student login</button><button id="logoutBtn" class="btn danger hidden">Log out</button></div>
+  </header>
+
+  <main>
+    <section id="landing">
+      <div class="hero">
+        <div><div class="eyebrow">YOUR LEARNING JOURNEY STARTS HERE</div><h2>Study smarter.<br><span style="color:var(--cyan)">Score higher.</span></h2><p>Access freshman learning resources, practise with online examinations, and review explanations to understand every answer.</p><button class="btn" id="heroJoin">Create student account</button></div>
+        <div class="hero-card"><div class="big">SKW</div><h3>Knowledge opens doors.</h3><p>One place for courses, practice and progress.</p></div>
+      </div>
+      <div class="stats"><div class="stat"><strong>04+</strong><span>Learning subjects</span></div><div class="stat"><strong>24/7</strong><span>Learn at your pace</span></div><div class="stat"><strong>100%</strong><span>Focus on progress</span></div></div>
+      <div class="section-head"><h2>Explore subjects</h2><span class="muted">For freshman students</span></div>
+      <div class="grid" id="publicCourses"></div>
+    </section>
+
+    <section id="authSection" class="panel auth hidden">
+      <h2 id="authTitle">Student login</h2><p class="muted" id="authIntro">Sign in to continue learning.</p>
+      <div id="authMessage" class="notice hidden"></div>
+      <form id="authForm">
+        <label class="field" id="nameField"><span>Full name</span><input id="fullName" autocomplete="name" placeholder="Your full name"></label>
+        <label class="field"><span>Email address</span><input id="email" type="email" required autocomplete="email" placeholder="student@example.com"></label>
+        <label class="field"><span>Password</span><input id="password" type="password" required minlength="6" autocomplete="current-password" placeholder="At least 6 characters"></label>
+        <div class="auth-actions"><button class="btn" id="submitAuth" type="submit">Log in</button><button class="btn ghost" id="switchAuth" type="button">Create account</button><button class="btn ghost" id="backHome" type="button">Back</button></div>
+      </form>
+      <p class="muted" style="font-size:12px">Use your own email address. Never share your password with anyone.</p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="section-head"><div><div class="eyebrow">STUDENT AREA</div><h2 id="welcome">Welcome!</h2><div class="muted">Your learning space is ready.</div></div><span class="notice">Account active</span></div>
+      <div class="tabs"><button class="tab active" data-tab="courses">Courses</button><button class="tab" data-tab="exams">Practice exams</button><button class="tab" data-tab="resources">Study resources</button><button class="tab" data-tab="account">My account</button></div>
+      <div id="tab-courses"><div class="grid" id="courseGrid"></div></div>
+      <div id="tab-exams" class="hidden">
+        <div class="panel"><h3>Practice examinations</h3><p class="muted">Choose a subject. Submit your answers to see your score and explanations.</p><div class="grid" id="examGrid"></div></div>
+        <div id="examArea" class="panel hidden"></div>
+      </div>
+      <div id="tab-resources" class="hidden"><div class="panel"><h3>Study resources</h3><p class="muted">Add your own PDF notes and module links here by editing the resource list in index.html.</p><ul><li>Physics: mechanics and measurement notes (add your PDF link)</li><li>Mathematics: algebra and functions (add your PDF link)</li><li>Communicative English: grammar and reading (add your PDF link)</li><li>Logic and Critical Thinking: introductory notes (add your PDF link)</li></ul></div></div>
+      <div id="tab-account" class="hidden"><div class="panel"><h3>My account</h3><p id="accountEmail" class="muted"></p><p id="accountName"></p><button class="btn danger" id="accountLogout">Log out</button></div></div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> SKW ACADEMY · Learn • Practice • Excel</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* 1. Add your Supabase Project URL and anon/public key below.
+   These are public browser settings. NEVER put a service_role key here. */
+const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_PUBLIC_KEY";
+let supabaseClient = null;
+if (window.supabase && SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && !SUPABASE_ANON_KEY.includes("YOUR_")) {
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+
+const courses = [
+  {name:"Physics",icon:"⚛️",desc:"Understand mechanics, motion, force, energy and more."},
+  {name:"Mathematics",icon:"📐",desc:"Build confidence in algebra, functions and problem solving."},
+  {name:"Communicative English",icon:"📘",desc:"Improve grammar, vocabulary, reading and communication."},
+  {name:"Logic & Critical Thinking",icon:"🧠",desc:"Develop reasoning, arguments and analytical skills."},
+  {name:"Anthropology",icon:"🌍",desc:"Explore human societies, culture and diversity."},
+  {name:"Psychology",icon:"🧩",desc:"Learn about behaviour, mind and human development."}
+];
+const exams = {
+  "Physics":[
+    {q:"What is the SI unit of force?",o:["Joule","Newton","Watt","Pascal"],a:1,e:"Force is measured in newtons (N). One newton is the force that gives a 1 kg mass an acceleration of 1 m/s²."},
+    {q:"Which quantity is a vector?",o:["Speed","Distance","Displacement","Time"],a:2,e:"Displacement has both magnitude and direction, so it is a vector."},
+    {q:"What is the formula for average speed?",o:["Distance ÷ time","Time ÷ distance","Mass × acceleration","Force ÷ area"],a:0,e:"Average speed equals total distance travelled divided by total time taken."}
+  ],
+  "Mathematics":[
+    {q:"Solve: 2x + 6 = 14.",o:["x = 3","x = 4","x = 5","x = 6"],a:1,e:"Subtract 6 from both sides: 2x = 8. Divide by 2: x = 4."},
+    {q:"What is the value of 3² + 4²?",o:["12","20","25","49"],a:2,e:"3² = 9 and 4² = 16. Therefore 9 + 16 = 25."},
+    {q:"What is the slope of a horizontal line?",o:["0","1","Undefined","-1"],a:0,e:"A horizontal line has no vertical change, so its slope is zero."}
+  ],
+  "Communicative English":[
+    {q:"Choose the correct sentence.",o:["She go to school every day.","She goes to school every day.","She going to school every day.","She gone to school every day."],a:1,e:"With he, she or it in the simple present, the verb usually takes -s or -es: she goes."},
+    {q:"Which word is a synonym of 'rapid'?",o:["Slow","Quick","Weak","Late"],a:1,e:"Rapid means fast or quick."},
+    {q:"Choose the correct form: 'They ___ finished their work.'",o:["has","have","is","was"],a:1,e:"Use 'have' with the subject 'they' in the present perfect tense."}
+  ],
+  "Logic & Critical Thinking":[
+    {q:"A statement that gives reasons to support a conclusion is called:",o:["An argument","A question","A command","A greeting"],a:0,e:"An argument consists of premises (reasons) intended to support a conclusion."},
+    {q:"Which is a conclusion indicator?",o:["Because","Since","Therefore","For"],a:2,e:"'Therefore' commonly signals that a conclusion is being drawn."}
+  ]
+};
+
+function courseCard(c, withButton=false){return `<article class="course"><div class="icon">${c.icon}</div><h3>${c.name}</h3><p>${c.desc}</p>${withButton?'<button class="btn secondary" data-open-exams="1">View practice</button>':''}</article>`}
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("publicCourses").innerHTML = courses.slice(0,3).map(c=>courseCard(c)).join("");
+document.getElementById("courseGrid").innerHTML = courses.map(c=>courseCard(c,true)).join("");
+document.getElementById("examGrid").innerHTML = Object.keys(exams).map(n=>`<article class="course"><div class="icon">📝</div><h3>${n}</h3><p>${exams[n].length} practice questions</p><button class="btn secondary" data-exam="${n}">Start practice</button></article>`).join("");
+
+let authMode = "login";
+const $ = id => document.getElementById(id);
+function showAuth(mode="login"){authMode=mode;$("landing").classList.add("hidden");$("dashboard").classList.add("hidden");$("authSection").classList.remove("hidden");$("authTitle").textContent=mode==="signup"?"Create student account":"Student login";$("authIntro").textContent=mode==="signup"?"Register with your name, email and password.":"Sign in to continue learning.";$("nameField").classList.toggle("hidden",mode!=="signup");$("submitAuth").textContent=mode==="signup"?"Create account":"Log in";$("switchAuth").textContent=mode==="signup"?"I already have an account":"Create account";$("authMessage").classList.add("hidden");}
+function showHome(){$("authSection").classList.add("hidden");$("dashboard").classList.add("hidden");$("landing").classList.remove("hidden");}
+function showDashboard(user){$("landing").classList.add("hidden");$("authSection").classList.add("hidden");$("dashboard").classList.remove("hidden");$("logoutBtn").classList.remove("hidden");$("headerAuthBtn").classList.add("hidden");$("userLabel").textContent=user.email||"Student";const name=user.user_metadata?.full_name||"Student";$("welcome").textContent="Welcome, "+name+"!";$("accountEmail").textContent="Email: "+(user.email||"");$("accountName").textContent="Name: "+name;}
+function showSignedOut(){$("logoutBtn").classList.add("hidden");$("headerAuthBtn").classList.remove("hidden");$("userLabel").textContent="";}
+function message(msg,isError=false){$("authMessage").textContent=msg;$("authMessage").className="notice"+(isError?" error":"");}
+$("headerAuthBtn").onclick=()=>showAuth("login");$("heroJoin").onclick=()=>showAuth("signup");$("backHome").onclick=showHome;
+$("switchAuth").onclick=()=>showAuth(authMode==="login"?"signup":"login");
+$("authForm").onsubmit=async e=>{e.preventDefault();if(!supabaseClient){message("Connect Supabase first: add your Project URL and anon public key in index.html, then commit the file.",true);return;}
+  const email=$("email").value.trim(),password=$("password").value,fullName=$("fullName").value.trim();$("submitAuth").disabled=true;$("submitAuth").textContent="Please wait...";
+  try{let result;if(authMode==="signup"){result=await supabaseClient.auth.signUp({email,password,options:{data:{full_name:fullName},emailRedirectTo:location.href}});if(result.error)throw result.error;if(result.data.session){showDashboard(result.data.user)}else{message("Account created. Check your email for a confirmation link, then return here and log in.");}}else{result=await supabaseClient.auth.signInWithPassword({email,password});if(result.error)throw result.error;showDashboard(result.data.user);}}
+  catch(err){message(err.message||"Something went wrong. Please try again.",true);}finally{$("submitAuth").disabled=false;$("submitAuth").textContent=authMode==="signup"?"Create account":"Log in";}
+};
+async function logout(){if(supabaseClient)await supabaseClient.auth.signOut();showSignedOut();showHome();}
+$("logoutBtn").onclick=logout;$("accountLogout").onclick=logout;
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));["courses","exams","resources","account"].forEach(t=>$("tab-"+t).classList.toggle("hidden",t!==b.dataset.tab));});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-exam]");if(b)startExam(b.dataset.exam);});
+function startExam(subject){const qs=exams[subject];const area=$("examArea");area.classList.remove("hidden");area.innerHTML=`<h3>${subject} practice exam</h3><p class="muted">Select one answer for each question, then submit.</p><form id="quizForm">${qs.map((q,i)=>`<div class="question"><h4>${i+1}. ${q.q}</h4>${q.o.map((o,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${o}</label>`).join("")}<div id="feedback${i}"></div></div>`).join("")}<button class="btn" type="submit">Submit answers</button></form><div id="scoreBox"></div>`;area.scrollIntoView({behavior:"smooth"});$("quizForm").onsubmit=e=>{e.preventDefault();let score=0;qs.forEach((q,i)=>{const chosen=area.querySelector(`input[name="q${i}"]:checked`);const correct=chosen&&Number(chosen.value)===q.a;if(correct)score++;$("feedback"+i).innerHTML=`<div class="result"><strong class="${correct?"correct":"incorrect"}">${correct?"Correct!":"Not quite."}</strong><br>Correct answer: ${String.fromCharCode(65+q.a)}. ${q.o[q.a]}<br><span class="muted">${q.e}</span></div>`;});$("scoreBox").innerHTML=`<div class="notice"><strong>Your score: ${score}/${qs.length}</strong> (${Math.round(score/qs.length*100)}%)</div>`;area.querySelectorAll("input").forEach(i=>i.disabled=true);area.querySelector('button[type="submit"]').disabled=true;};}
+async function init(){if(!supabaseClient){showSignedOut();return;}const {data:{session}}=await supabaseClient.auth.getSession();if(session)showDashboard(session.user);else showSignedOut();supabaseClient.auth.onAuthStateChange((_event,session)=>{if(session)showDashboard(session.user);else showSignedOut();});}
+init();
+</script>
+</body>
+</html>
