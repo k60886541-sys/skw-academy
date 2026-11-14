@@ -77,8 +77,8 @@
 <script>
 /* 1. Add your Supabase Project URL and anon/public key below.
    These are public browser settings. NEVER put a service_role key here. */
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_PUBLIC_KEY";
+const SUPABASE_URL = "https://tpnihnycmihjnwlyjnwr.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_A2GCBPjw0JR0bnraMwaOOQ_6-2_aNX6";
 let supabaseClient = null;
 if (window.supabase && SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && !SUPABASE_ANON_KEY.includes("YOUR_")) {
   supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
